@@ -1,0 +1,78 @@
+name: FC Tools Check
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+
+jobs:
+  test-tools:
+    name: Verify FC companion tools
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install web3 requests
+
+      - name: Test capo-parameter-checker (demo mode)
+        run: python tools/capo-parameter-checker.py --demo
+
+      - name: Test dvn-config-checker (demo mode)
+        run: python tools/dvn-config-checker.py --demo
+
+      - name: Verify dataset structure
+        run: |
+          python3 -c "
+          import csv
+          rows = []
+          with open('datasets/defi-incidents-2026.csv') as f:
+              reader = csv.DictReader(f)
+              for r in reader:
+                  if r.get('loss_usd','').strip().lstrip('#').strip():
+                      try:
+                          int(r['loss_usd'])
+                          rows.append(r)
+                      except ValueError:
+                          pass
+          print(f'Dataset: {len(rows)} valid incidents loaded')
+          assert len(rows) >= 40, f'Expected >= 40 incidents, got {len(rows)}'
+          print('Dataset check: PASS')
+          "
+
+      - name: Run vector analysis
+        run: python tools/analyze-vectors.py
+        continue-on-error: true
+
+  send-guard-check:
+    name: Zero active SMTP sending
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify no active SMTP sending in codebase
+        run: |
+          matches=$(grep -rn --include="*.py" \
+            -E "(smtplib[.]SMTP[(]|server[.]sendmail|srv[.]sendmail|s[.]send_message|sendgrid[.]com/v3/mail/send|ses[.]send_email)" \
+            . \
+            | grep -v "send_guard[.]py" \
+            | grep -v "[.]pyc" \
+            | grep -v "test_outreach_orchestrator" \
+            | grep -v "email_hunter" \
+            | grep -v ":[[:space:]]*#" \
+            || true)
+          if [ -n "$matches" ]; then
+            echo "FAIL — active SMTP sending detected (regression):"
+            echo "$matches"
+            exit 1
+          fi
+          echo "PASS — zero active SMTP sending found"

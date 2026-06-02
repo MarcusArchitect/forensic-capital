@@ -1,0 +1,50 @@
+date,protocol,chain,loss_usd,vector_category,root_cause,post_mortem_url,recovery_status,source_primary
+# Forensic Capital — DeFi Incident Database
+# License: CC-BY-4.0
+# Version: 2026-05-31
+# Sources: Rekt News, CertiK, Chainalysis, DefiLlama, Blockaid, SlowMist
+# Disclaimer: Aggregated from public post-mortems. No private data.
+#   No attribution beyond public sources.
+# forensic-capital.com/defi/
+2021-08-10,PolyNetwork,Multiple,611000000,BRIDGE_VERIFICATION_GAP,cross_chain_privilege_escalation,https://rekt.news/polynetwork-rekt/,resolved,rekt.news
+2021-10-27,Cream_Finance,Ethereum,130000000,FLASH_LOAN,flash_loan_price_oracle_manipulation,https://rekt.news/cream-rekt3/,unresolved,rekt.news
+2022-02-02,Wormhole,Solana+Ethereum,321000000,BRIDGE_VERIFICATION_GAP,guardian_signature_verification_bypass,https://rekt.news/wormhole-rekt/,resolved,rekt.news
+2022-03-23,Ronin_Bridge,Ethereum,624000000,CREDENTIAL_COMPROMISE,validator_private_key_compromise,https://rekt.news/ronin-rekt/,partial,rekt.news
+2022-04-17,Beanstalk,Ethereum,182000000,GOVERNANCE,flash_loan_governance_proposal_exploit,https://rekt.news/beanstalk-rekt/,unresolved,rekt.news
+2022-06-23,Harmony_Horizon,Ethereum,100000000,CREDENTIAL_COMPROMISE,multisig_private_key_compromise,https://rekt.news/harmony-rekt/,unresolved,rekt.news
+2022-08-01,Nomad,Ethereum,190700000,BRIDGE_VERIFICATION_GAP,message_root_zero_value_replay,https://rekt.news/nomad-rekt/,partial,rekt.news
+2022-09-20,Wintermute,Ethereum,160000000,ACCESS_CONTROL,vanity_address_profanity_generator_exploit,https://rekt.news/wintermute-rekt/,resolved,rekt.news
+2022-10-07,BNB_Chain_Bridge,BNB,570000000,BRIDGE_VERIFICATION_GAP,merkle_proof_forgery,https://rekt.news/bnb-bridge-rekt/,resolved,rekt.news
+2023-03-13,Euler_Finance,Ethereum,197000000,FLASH_LOAN,flash_loan_donation_attack,https://rekt.news/euler-rekt/,resolved,rekt.news
+2023-07-06,Multichain,Multiple,126000000,CREDENTIAL_COMPROMISE,admin_key_compromise,https://rekt.news/multichain-rekt3/,unresolved,rekt.news
+2023-07-30,Curve_Finance,Ethereum,73500000,REENTRANCY,vyper_compiler_reentrancy_bug,https://rekt.news/curve-vyper-rekt/,partial,rekt.news
+2023-09-12,CoinEx,Multiple,55000000,CREDENTIAL_COMPROMISE,hot_wallet_private_key_compromise,https://rekt.news/coinex-rekt/,partial,rekt.news
+2023-09-23,Mixin_Network,Ethereum,200000000,CREDENTIAL_COMPROMISE,cloud_database_service_breach,https://rekt.news/mixin-rekt/,partial,rekt.news
+2023-11-22,KyberSwap,Multiple,48800000,PRICE_MANIPULATION,tick_boundary_virtual_reserves_exploit,https://rekt.news/kyberswap-rekt/,unresolved,rekt.news
+2024-01-01,Orbit_Chain,Ethereum,82000000,CREDENTIAL_COMPROMISE,multisig_key_compromise,https://rekt.news/orbit-chain-rekt/,partial,rekt.news
+2026-04-18,KelpDAO,Ethereum,292000000,DVN_BRIDGE,dvn_threshold_bypass,https://forensic-capital.com/the-kelpdao-exploit/,partial,forensic-capital.com
+2024-01-03,Radiant_Capital,Arbitrum,4500000,FLASH_LOAN,flash_loan_market_manipulation,https://rekt.news/radiant-capital-rekt/,partial,rekt.news
+2024-02-09,PlayDapp,Ethereum,290000000,ACCESS_CONTROL,private_key_compromise_minter_role,https://rekt.news/playdapp-rekt/,unresolved,rekt.news
+2024-03-05,WOOFi,Arbitrum,8700000,PRICE_MANIPULATION,spot_price_oracle_manipulation,https://rekt.news/woofi-rekt/,unresolved,rekt.news
+2024-03-28,Prisma_Finance,Ethereum,11600000,ACCESS_CONTROL,flash_loan_governance_attack,https://rekt.news/prisma-rekt/,partial,rekt.news
+2024-04-19,Hedgey_Finance,Ethereum,44700000,FLASH_LOAN,token_claiming_contract_flash_loan,https://rekt.news/hedgey-rekt/,partial,rekt.news
+2024-05-01,Pike_Finance,Ethereum,1600000,ACCESS_CONTROL,cross_chain_storage_exploit,https://rekt.news/pike-finance-rekt/,unresolved,rekt.news
+2024-05-15,Sonne_Finance,Optimism,20000000,PRICE_MANIPULATION,compound_fork_empty_market_donation,https://rekt.news/sonne-rekt/,unresolved,rekt.news
+2024-05-20,Gala_Games,Ethereum,22000000,ACCESS_CONTROL,centralized_admin_key_unauthorized_mint,https://rekt.news/gala-games-rekt/,resolved,rekt.news
+2024-05-26,Alex_Lab,Bitcoin+Ethereum,4300000,ACCESS_CONTROL,private_key_bridge_signer_compromise,https://rekt.news/alex-lab-rekt/,partial,rekt.news
+2024-07-16,LiFi_Protocol,Ethereum,11600000,ACCESS_CONTROL,infinite_approval_calldata_exploit,https://rekt.news/lifi-rekt2/,unresolved,rekt.news
+2024-08-06,Ronin_Network,Ethereum,12000000,ACCESS_CONTROL,validator_threshold_misconfiguration,https://rekt.news/ronin-rekt2/,resolved,rekt.news
+2024-09-03,Penpie,Ethereum,27000000,REENTRANCY,reentrancy_staking_pool_reward_manipulation,https://rekt.news/penpie-rekt/,unresolved,rekt.news
+2024-09-20,BingX,Multiple,44700000,ACCESS_CONTROL,hot_wallet_private_key_compromise,https://rekt.news/bingx-rekt/,partial,rekt.news
+2024-09-26,Delta_Prime,Arbitrum,6000000,ACCESS_CONTROL,admin_key_upgrade_proxy_exploit,https://rekt.news/delta-prime-rekt/,unresolved,rekt.news
+2024-10-11,Tapioca_DAO,Ethereum,4700000,CREDENTIAL_COMPROMISE,social_engineering_private_key_steal,https://rekt.news/tapioca-rekt/,partial,rekt.news
+2024-10-16,Radiant_Capital,BNB+Ethereum,50000000,ACCESS_CONTROL,multisig_private_key_compromise,https://rekt.news/radiant-capital-rekt2/,unresolved,rekt.news
+2024-10-31,M2_Exchange,Solana+Ethereum,13700000,ACCESS_CONTROL,hot_wallet_compromise,https://rekt.news/m2-rekt/,resolved,rekt.news
+2024-11-17,Thala,Aptos,25500000,ACCESS_CONTROL,move_module_exploit,https://rekt.news/thala-rekt/,resolved,rekt.news
+2024-11-17,Polter_Finance,Fantom,12000000,PRICE_MANIPULATION,empty_market_flash_loan,https://rekt.news/polter-rekt/,unresolved,rekt.news
+2025-02-21,Bybit,Ethereum,1500000000,ACCESS_CONTROL,safe_multisig_ui_compromise,https://rekt.news/bybit-rekt/,unresolved,rekt.news
+2025-04-18,KiloEx,BNB+Arbitrum,7400000,PRICE_MANIPULATION,cross_chain_price_oracle_manipulation,https://rekt.news/kiloex-rekt/,resolved,rekt.news
+2025-04-21,Loopscale,Solana,5700000,PRICE_MANIPULATION,oracle_price_manipulation_collateral,https://rekt.news/loopscale-rekt/,partial,rekt.news
+2026-03-10,Aave,Ethereum,26000000,ORACLE_MISCONFIGURATION,capo_parameter_misconfiguration,https://forensic-capital.com/reports/aave-capo/,resolved,forensic-capital.com
+2026-03-22,Resolv,Ethereum,25000000,CREDENTIAL_COMPROMISE,aws_kms_service_role_compromise,https://forensic-capital.com/reports/resolv/,partial,certik.com
+2026-05-18,Verus_Bridge,Ethereum,11580000,BRIDGE_VERIFICATION_GAP,checkCCEValues_binding_gap,https://forensic-capital.com/reports/fc-004-verus/,partial,blockaid.io

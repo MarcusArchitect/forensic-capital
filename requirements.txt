@@ -1,0 +1,4 @@
+# Required only for live on-chain mode (FC_RPC_URL).
+# Demo mode runs on the standard library alone.
+web3>=6.0
+requests>=2.28

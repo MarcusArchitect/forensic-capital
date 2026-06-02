@@ -1,0 +1,18 @@
+*.pyc
+__pycache__/
+.env
+*.sqlite
+*.db
+.DS_Store
+node_modules/
+*.log
+*.bak
+*.bak_*
+
+# Generated files — do not commit, regenerate with:
+#   python3 tools/analyze-vectors.py --update
+datasets/vector-stats.json
+
+# local backups
+*.bak
+*.bak_*

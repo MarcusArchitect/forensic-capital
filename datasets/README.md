@@ -36,6 +36,7 @@ It is listed in `.gitignore` and is not committed to the repository.
 ```bash
 python3 tools/analyze-vectors.py --update
 ```
+Regenerate: python tools/analyze-vectors.py --json
 
 Output: `datasets/vector-stats.json` (42 incidents, 9 vectors, CC-BY-4.0).
 

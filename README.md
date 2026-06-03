@@ -76,7 +76,7 @@ Blockaid, SlowMist, PeckShield.
 ## Contact
 
 forensic-capital.com/defi/
-marcus@forensic-capital.com
+research@forensic-capital.com
 
 ---
 *Forensic Capital maintains 2–3 active mandates.

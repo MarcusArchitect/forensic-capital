@@ -2,7 +2,7 @@
 ## Forensic Capital — DeFi Incident Classification Framework
 
 **Version:** 1.0 | **Published:** 2026-05-31
-**Dataset:** defi-incidents-2026.csv — 43 verified incidents (2021–2026)
+**Dataset:** defi-incidents-2026.csv — 42 verified incidents (2021–2026)
 **License:** CC-BY-4.0
 
 ---
@@ -10,7 +10,7 @@
 ## Overview
 
 Unified classification of DeFi security incidents based on root cause analysis.
-Derived from the Forensic Capital incident database of 43 verified incidents
+Derived from the Forensic Capital incident database of 42 verified incidents
 totalling $6.15B in verified losses.
 
 Each incident is assigned a single primary `vector_category` reflecting the

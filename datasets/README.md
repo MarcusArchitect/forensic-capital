@@ -44,7 +44,7 @@ Output: `datasets/vector-stats.json` (42 incidents, 9 vectors, CC-BY-4.0).
 ## dvn-operator-registry.json
 
 Public registry of known LayerZero DVN operators.
-10 operators documented from official LayerZero docs,
+12 operators documented from official LayerZero docs,
 Etherscan, and public announcements.
 
 ### Schema

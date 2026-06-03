@@ -11,16 +11,16 @@
     "https://cloud.google.com/blog/products/data-analytics/google-cloud-layerzero-dvn"
   ],
   "custody_level_definitions": {
-    "L0": "Protocol team or founding entity — single key custodian, highest centralization risk",
-    "L1": "Single independent entity — corporate or institutional key holder",
-    "L2": "Multi-sig or threshold — distributed among known parties",
-    "L3": "ZK-proof or cryptographic verification — minimal trust assumptions"
+    "L0": "Protocol team or founding entity \u2014 single key custodian, highest centralization risk",
+    "L1": "Single independent entity \u2014 corporate or institutional key holder",
+    "L2": "Multi-sig or threshold \u2014 distributed among known parties",
+    "L3": "ZK-proof or cryptographic verification \u2014 minimal trust assumptions"
   },
   "fc_context": {
-    "report": "FC-001 KelpDAO — $292M DVN threshold bypass",
+    "report": "FC-001 KelpDAO \u2014 $292M DVN threshold bypass",
     "url": "https://forensic-capital.com/the-kelpdao-exploit/",
     "finding": "requiredDVNCount = 1 allows a single DVN at any custody level to approve fraudulent cross-chain messages unilaterally. L0/L1 operators in 1-of-1 configurations represent maximum exploit surface.",
-    "risk_pattern": "L0 or L1 operator with requiredDVNCount = 1 → FC-001 attack vector"
+    "risk_pattern": "L0 or L1 operator with requiredDVNCount = 1 \u2192 FC-001 attack vector"
   },
   "operators": [
     {
@@ -59,14 +59,14 @@
       "entity": "Polyhedra Network Ltd.",
       "headquarters": "Cayman Islands",
       "custody_level": "L3",
-      "custody_notes": "Address not verified — null pending primary source confirmation.",
+      "custody_notes": "Address not verified \u2014 null pending primary source confirmation.",
       "address_mainnet": null,
       "verified_etherscan": false,
       "source": "https://layerzero.network/ecosystem",
       "verified_date": "2026-05-31",
       "fc_risk_note": "L3 ZK verification. Lowest custody risk in the DVN ecosystem.",
       "confidence": "inferred",
-      "confidence_note": "Ecosystem page + zkBridge public docs confirm identity. Address not Etherscan-verified. L3 custody inferred from ZK architecture — not confirmed by primary disclosure."
+      "confidence_note": "Ecosystem page + zkBridge public docs confirm identity. Address not Etherscan-verified. L3 custody inferred from ZK architecture \u2014 not confirmed by primary disclosure."
     },
     {
       "id": "nethermind",
@@ -89,14 +89,14 @@
       "entity": "Blockdaemon Inc.",
       "headquarters": "New York, NY, USA",
       "custody_level": "L1",
-      "custody_notes": "Enterprise blockchain infrastructure provider. Institutional-grade key management systems.",
-      "address_mainnet": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
-      "verified_etherscan": true,
+      "custody_notes": "Enterprise blockchain infrastructure provider. Institutional-grade key management systems. Address pending verification.",
+      "address_mainnet": null,
+      "verified_etherscan": false,
       "source": "https://docs.layerzero.network/v2/developers/evm/technical-reference/dvn-addresses",
       "verified_date": "2026-05-31",
       "fc_risk_note": "L1 enterprise custody. Institutional SLA, single-entity trust.",
-      "confidence": "verified",
-      "confidence_note": "Address in official LayerZero V2 DVN address list. Etherscan confirms Blockdaemon operator label."
+      "confidence": "inferred",
+      "confidence_note": "Listed in official LayerZero V2 DVN address list. Previously assigned address not independently confirmed \u2014 set to null pending Etherscan verification."
     },
     {
       "id": "bware-labs",
@@ -111,7 +111,7 @@
       "verified_date": "2026-06-02",
       "fc_risk_note": "L1 independent operator.",
       "confidence": "inferred",
-      "confidence_note": "Listed in LayerZero docs. Address not Etherscan-verified. L1 classification inferred from company profile — no primary disclosure of key management architecture."
+      "confidence_note": "Listed in LayerZero docs. Address not Etherscan-verified. L1 classification inferred from company profile \u2014 no primary disclosure of key management architecture."
     },
     {
       "id": "horizen-labs",
@@ -126,7 +126,7 @@
       "verified_date": "2026-06-02",
       "fc_risk_note": "L2 multi-sig (inferred). Better risk profile than L0/L1 if confirmed.",
       "confidence": "inferred",
-      "confidence_note": "Ecosystem page listing. Address not Etherscan-verified. L2 multi-sig classification inferred from public ZK infrastructure descriptions — not independently confirmed for DVN role specifically."
+      "confidence_note": "Ecosystem page listing. Address not Etherscan-verified. L2 multi-sig classification inferred from public ZK infrastructure descriptions \u2014 not independently confirmed for DVN role specifically."
     },
     {
       "id": "bcw-group",
@@ -141,7 +141,7 @@
       "verified_date": "2026-06-02",
       "fc_risk_note": "L1 institutional operator, APAC jurisdiction (inferred).",
       "confidence": "inferred",
-      "confidence_note": "Listed in LayerZero DVN address docs. Address not Etherscan-verified. L1 inferred from company profile — no public DVN-specific key management disclosure."
+      "confidence_note": "Listed in LayerZero DVN address docs. Address not Etherscan-verified. L1 inferred from company profile \u2014 no public DVN-specific key management disclosure."
     },
     {
       "id": "animoca-brands",
@@ -149,7 +149,7 @@
       "entity": "Animoca Brands Ltd.",
       "headquarters": "Hong Kong",
       "custody_level": "L1",
-      "custody_notes": "Address not verified — null pending primary source confirmation.",
+      "custody_notes": "Address not verified \u2014 null pending primary source confirmation.",
       "address_mainnet": null,
       "verified_etherscan": false,
       "source": "https://layerzero.network/ecosystem",
@@ -164,14 +164,14 @@
       "entity": "Mercury Technologies",
       "headquarters": "Unknown",
       "custody_level": "L1",
-      "custody_notes": "Address not verified — null pending primary source confirmation.",
+      "custody_notes": "Address not verified \u2014 null pending primary source confirmation.",
       "address_mainnet": null,
       "verified_etherscan": false,
       "source": "https://docs.layerzero.network/v2/developers/evm/technical-reference/dvn-addresses",
       "verified_date": "2026-05-31",
       "fc_risk_note": "Confidence insufficient. Cannot assess risk profile without address or entity verification.",
       "confidence": "unknown",
-      "confidence_note": "Name in LayerZero documentation with no associated address, entity registration, or infrastructure disclosure. All fields unverified — included for completeness only."
+      "confidence_note": "Name in LayerZero documentation with no associated address, entity registration, or infrastructure disclosure. All fields unverified \u2014 included for completeness only."
     },
     {
       "id": "p2p-validator",
@@ -194,7 +194,7 @@
       "entity": "Stakely.io",
       "headquarters": "Unknown",
       "custody_level": "L1",
-      "custody_notes": "Address not verified — null pending primary source confirmation.",
+      "custody_notes": "Address not verified \u2014 null pending primary source confirmation.",
       "address_mainnet": null,
       "verified_etherscan": false,
       "source": "https://docs.layerzero.network/v2/developers/evm/technical-reference/dvn-addresses",
@@ -212,9 +212,9 @@
       "L2": 1,
       "L3": 1
     },
-    "etherscan_verified": 4,
+    "etherscan_verified": 3,
     "fc_risk_pattern_l0_l1": 10,
-    "note": "4 operators verified (Etherscan + primary source). 5 inferred (listed in docs, details unconfirmed). 3 unknown (ecosystem listing or no address). 10 of 12 are L0 or L1 custody — FC-001 pattern applies in 1-of-1 configurations.",
+    "note": "4 operators verified (Etherscan + primary source). 5 inferred (listed in docs, details unconfirmed). 3 unknown (ecosystem listing or no address). 10 of 12 are L0 or L1 custody \u2014 FC-001 pattern applies in 1-of-1 configurations.",
     "by_confidence": {
       "verified": 4,
       "inferred": 5,

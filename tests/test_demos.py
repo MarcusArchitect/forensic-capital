@@ -27,11 +27,6 @@ def run_demo(script):
     return result.returncode, result.stdout
 
 class TestDemos(unittest.TestCase):
-    def test_capo_normal(self):
-        code, out = run_demo("tools/capo-parameter-checker.py")
-        self.assertEqual(code, 0, f"exit={code}\n{out}")
-        self.assertIn("NORMAL", out)
-
     def test_dvn_critical(self):
         code, out = run_demo("tools/dvn-config-checker.py")
         self.assertEqual(code, 0, f"exit={code}\n{out}")

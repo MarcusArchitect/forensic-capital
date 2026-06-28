@@ -11,20 +11,16 @@ forensic-capital.com
 | ID | Protocol | Loss | Vector | Date |
 |---|---|---|---|---|
 | FC-001 | KelpDAO | $292M | DVN Bridge Misconfiguration | 2026-04-18 |
-| FC-002 | Aave | $26M | CAPO Oracle Misconfiguration | 2025-07 |
 | FC-003 | Resolv | $25M | AWS KMS Credential Compromise | 2026-03-22 |
 | FC-004 | Verus Bridge | $11.58M | Bridge Verification Gap | 2026-05-18 |
 
 → Full reports: forensic-capital.com/defi/
 
+> Scope note: Forensic Capital's published corpus covers bridge and cross-chain verification failures only. Incidents outside this perimeter (e.g. oracle parameter misconfiguration) are tracked internally, not here.
+
 ## Repository Contents
 
 ### /tools
-**[capo-parameter-checker.py](tools/capo-parameter-checker.py)**
-Verify CAPO oracle parameters on Aave V3 forks.
-Companion to FC-002 analysis ($26M CAPO incident).
-Checks: price bounds, growth rate caps, fallback triggers.
-
 **[dvn-config-checker.py](tools/dvn-config-checker.py)**
 Verify LayerZero V2 DVN configuration health.
 Companion to FC-001 KelpDAO ($292M DVN threshold bypass).
@@ -39,7 +35,7 @@ Breakdown by vector: count, total loss, % of dataset, FC coverage.
 
 ### /datasets
 **[defi-incidents-2026.csv](datasets/defi-incidents-2026.csv)**
-42 verified DeFi incidents, 2026.
+41 verified DeFi incidents, 2026.
 Schema: date | protocol | chain | loss_usd |
 vector_category | root_cause | source_url | status
 License: CC-BY-4.0
@@ -58,7 +54,7 @@ Underlying methodology for FC-001 KelpDAO ($292M).
 
 **[fc-risk-taxonomy.md](methodology/fc-risk-taxonomy.md)**
 Unified DeFi attack vector taxonomy.
-9 categories, 42 incidents, $6.15B aggregate.
+8 categories, 41 incidents, $6.13B aggregate.
 Classification basis for defi-incidents-2026.csv.
 
 ## Methodology

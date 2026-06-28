@@ -45,6 +45,5 @@ date,protocol,chain,loss_usd,vector_category,root_cause,post_mortem_url,recovery
 2025-02-21,Bybit,Ethereum,1500000000,ACCESS_CONTROL,safe_multisig_ui_compromise,https://rekt.news/bybit-rekt/,unresolved,rekt.news
 2025-04-18,KiloEx,BNB+Arbitrum,7400000,PRICE_MANIPULATION,cross_chain_price_oracle_manipulation,https://rekt.news/kiloex-rekt/,resolved,rekt.news
 2025-04-21,Loopscale,Solana,5700000,PRICE_MANIPULATION,oracle_price_manipulation_collateral,https://rekt.news/loopscale-rekt/,partial,rekt.news
-2026-03-10,Aave,Ethereum,26000000,ORACLE_MISCONFIGURATION,capo_parameter_misconfiguration,https://forensic-capital.com/reports/aave-capo/,resolved,forensic-capital.com
 2026-03-22,Resolv,Ethereum,25000000,CREDENTIAL_COMPROMISE,aws_kms_service_role_compromise,https://forensic-capital.com/reports/resolv/,partial,certik.com
 2026-05-18,Verus_Bridge,Ethereum,11580000,BRIDGE_VERIFICATION_GAP,checkCCEValues_binding_gap,https://forensic-capital.com/reports/fc-004-verus/,partial,blockaid.io

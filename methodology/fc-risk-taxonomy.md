@@ -2,7 +2,7 @@
 ## Forensic Capital — DeFi Incident Classification Framework
 
 **Version:** 1.0 | **Published:** 2026-05-31
-**Dataset:** defi-incidents-2026.csv — 42 verified incidents (2021–2026)
+**Dataset:** defi-incidents-2026.csv — 41 verified incidents (2021–2026)
 **License:** CC-BY-4.0
 
 ---
@@ -10,17 +10,16 @@
 ## Overview
 
 Unified classification of DeFi security incidents based on root cause analysis.
-Derived from the Forensic Capital incident database of 42 verified incidents
-totalling $6.15B in verified losses.
+Derived from the Forensic Capital incident database of 41 verified incidents
+totalling $6.13B in verified losses.
 
 Each incident is assigned a single primary `vector_category` reflecting the
 root exploitation mechanism, not the attack delivery method. For example,
 a flash loan used to manipulate governance is classified as `GOVERNANCE`, not
 `FLASH_LOAN`, because the flash loan is a delivery mechanism, not the vulnerability.
 
-FC has published full forensic reports for 4 incident classes:
-FC-001 (DVN_BRIDGE), FC-002 (ORACLE_MISCONFIGURATION),
-FC-003 (CREDENTIAL_COMPROMISE), FC-004 (BRIDGE_VERIFICATION_GAP).
+FC has published full forensic reports for 3 incident classes:
+FC-001 (DVN_BRIDGE), FC-003 (CREDENTIAL_COMPROMISE), FC-004 (BRIDGE_VERIFICATION_GAP).
 
 ---
 
@@ -30,18 +29,17 @@ Sorted by total loss (descending). Figures from `defi-incidents-2026.csv`.
 
 | Vector | Incidents | Total Loss | % of \$Total | FC Coverage |
 |---|---:|---:|---:|---|
-| ACCESS_CONTROL | 14 | $2,153,000,000 | 35.0% | — |
-| BRIDGE_VERIFICATION_GAP | 5 | $1,704,280,000 | 27.7% | FC-004 |
-| CREDENTIAL_COMPROMISE | 8 | $1,216,700,000 | 19.8% | FC-003 |
+| ACCESS_CONTROL | 14 | $2,153,000,000 | 35.1% | — |
+| BRIDGE_VERIFICATION_GAP | 5 | $1,704,280,000 | 27.8% | FC-004 |
+| CREDENTIAL_COMPROMISE | 8 | $1,216,700,000 | 19.9% | FC-003 |
 | FLASH_LOAN | 4 | $376,200,000 | 6.1% | — |
-| DVN_BRIDGE | 1 | $292,000,000 | 4.7% | FC-001 |
+| DVN_BRIDGE | 1 | $292,000,000 | 4.8% | FC-001 |
 | GOVERNANCE | 1 | $182,000,000 | 3.0% | — |
 | PRICE_MANIPULATION | 6 | $102,600,000 | 1.7% | — |
 | REENTRANCY | 2 | $100,500,000 | 1.6% | — |
-| ORACLE_MISCONFIGURATION | 1 | $26,000,000 | 0.4% | FC-002 |
-| **TOTAL** | **42** | **$6,153,280,000** | **100%** | |
+| **TOTAL** | **41** | **$6,127,280,000** | **100%** | |
 
-*Note: 1 row excluded (malformed source tag). 42 clean data rows used for statistics.*
+*Note: 1 row excluded (malformed source tag). 41 clean data rows used for statistics.*
 
 ---
 
@@ -99,8 +97,8 @@ the governance design (insufficient time-lock, low quorum requirements).
 ### PRICE_MANIPULATION
 An attacker manipulates the price reported by a spot or oracle-based price
 feed to borrow against inflated collateral or trigger incorrect liquidations.
-Distinct from ORACLE_MISCONFIGURATION: the price feed works as designed
-but is used in a protocol context where manipulation is economically viable.
+The price feed works as designed but is used in a protocol context where
+manipulation is economically viable.
 
 **Signature incidents:** KyberSwap ($48.8M, tick boundary exploit),
 Polter Finance ($12M, empty market flash loan), KiloEx ($7.4M).
@@ -113,13 +111,6 @@ Includes compiler-level reentrancy bugs (Curve/Vyper).
 **Signature incidents:** Curve Finance ($73.5M, Vyper compiler bug),
 Penpie ($27M, staking pool reentrancy).
 
-### ORACLE_MISCONFIGURATION
-A price oracle is configured with parameters that allow manipulation or
-stale prices to reach borrowing contracts. The oracle itself may function
-correctly — the risk is in the integration parameters.
-
-**Signature incident:** Aave CAPO misconfiguration ($26M — FC-002).
-
 ---
 
 ## FC Coverage
@@ -129,12 +120,11 @@ Full forensic analysis published for the following incident classes:
 | FC ID | Protocol | Vector | Loss | Status | Coverage Level |
 |---|---|---|---:|---|---|
 | FC-001 | KelpDAO | DVN_BRIDGE | $292,000,000 | Partial | Full forensic |
-| FC-002 | Aave | ORACLE_MISCONFIGURATION | $26,000,000 | Resolved | Full forensic |
 | FC-003 | Resolv | CREDENTIAL_COMPROMISE | $25,000,000 | Partial | Full forensic |
 | FC-004 | Verus Bridge | BRIDGE_VERIFICATION_GAP | $11,580,000 | Partial | Full forensic |
 
-FC-001 through FC-004 represent 4 distinct vector classes — no two FC reports
-cover the same attack surface. Combined: $354,580,000 in documented losses.
+FC-001, FC-003, and FC-004 represent 3 distinct vector classes — no two FC reports
+cover the same attack surface. Combined: $328,580,000 in documented losses.
 
 ---
 
@@ -155,7 +145,7 @@ and multisig threshold management are the highest-leverage defensive investments
 
 BRIDGE_VERIFICATION_GAP (5 incidents, $1.70B) and DVN_BRIDGE (1 incident, $292M)
 share the same architectural root: cross-chain message verification failure.
-Combined: 6 incidents, $1,996,280,000 — **32.4% of all losses**, making it
+Combined: 6 incidents, $1,996,280,000 — **32.6% of all losses**, making it
 the second largest attack class after ACCESS_CONTROL.
 
 **Implication:** Cross-chain bridge infrastructure represents the second
@@ -182,12 +172,11 @@ When BRIDGE_VERIFICATION_GAP and DVN_BRIDGE are merged into a single
 
 | Class | Incidents | Total Loss | % of Dataset |
 |---|---:|---:|---:|
-| ACCESS_CONTROL | 14 | $2,153,000,000 | 35.0% |
-| **BRIDGE_CLASS** | **6** | **$1,996,280,000** | **32.4%** |
-| CREDENTIAL_COMPROMISE | 8 | $1,216,700,000 | 19.8% |
+| ACCESS_CONTROL | 14 | $2,153,000,000 | 35.1% |
+| **BRIDGE_CLASS** | **6** | **$1,996,280,000** | **32.6%** |
+| CREDENTIAL_COMPROMISE | 8 | $1,216,700,000 | 19.9% |
 | FLASH_LOAN + PRICE_MANIPULATION | 10 | $478,800,000 | 7.8% |
 | GOVERNANCE + REENTRANCY | 3 | $282,500,000 | 4.6% |
-| ORACLE_MISCONFIGURATION | 1 | $26,000,000 | 0.4% |
 
 ---
 

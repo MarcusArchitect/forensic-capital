@@ -29,7 +29,6 @@ JSON_OUT    = os.path.join(REPO_ROOT, "datasets", "vector-stats.json")
 # ── FC incident URLs ─────────────────────────────────────────────────────────
 FC_REPORTS = {
     "KelpDAO":     "forensic-capital.com/the-kelpdao-exploit/",
-    "Aave":        "forensic-capital.com/reports/aave-capo/",
     "Resolv":      "forensic-capital.com/reports/resolv/",
     "Verus_Bridge":"forensic-capital.com/reports/fc-004-verus/",
 }
@@ -43,7 +42,6 @@ DEMO_ROWS = [
     {"date":"2023-03-13","protocol":"Euler_Finance", "loss":197000000,"vector":"FLASH_LOAN",             "fc":False},
     {"date":"2025-02-21","protocol":"Bybit",         "loss":1500000000,"vector":"ACCESS_CONTROL",        "fc":False},
     {"date":"2026-04-18","protocol":"KelpDAO",       "loss":292000000,"vector":"DVN_BRIDGE",             "fc":True},
-    {"date":"2026-03-10","protocol":"Aave",          "loss":26000000, "vector":"ORACLE_MISCONFIGURATION","fc":True},
     {"date":"2026-03-22","protocol":"Resolv",        "loss":25000000, "vector":"CREDENTIAL_COMPROMISE",  "fc":True},
     {"date":"2026-05-18","protocol":"Verus_Bridge",  "loss":11580000, "vector":"BRIDGE_VERIFICATION_GAP","fc":True},
 ]

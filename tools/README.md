@@ -346,4 +346,117 @@ Standard library only. No install required.
 
 ---
 
+## cross-layer-agreement-checker.py
+
+**Forensic Capital — cross-layer verification tooling** — Detect asset identity disagreement across dual-verification bridge layers.
+
+Cross-layer interpretation mismatch occurs when two independent verification layers resolve
+different identities from the same payload, or when a payload encodes more than one valid
+identity. Applies to any dual-verification bridge architecture, including relay-proof and
+zk-light-client designs.
+[forensic-capital.com](https://forensic-capital.com)
+
+### What it checks
+
+For each verification scenario:
+
+- Exact agreement between `resolution_layer_a` and `resolution_layer_b`
+- Payload identity count (must equal 1 for unambiguous processing)
+- REJECT if `identity_count ≠ 1` (reason: `multiple_identities`)
+- REJECT if layer resolutions differ (reason: `layer_disagreement`)
+- Edge cases: None inputs, empty strings, identity_count = 0
+
+### Dependencies
+
+Standard library only. No install required.
+
+### Usage
+
+**Demo mode** (no network required — always works):
+```bash
+python3 cross-layer-agreement-checker.py --demo
+```
+
+**Production use** — import `check_agreement()` directly:
+```python
+from tools.cross_layer_agreement_checker import check_agreement
+verdict, reason = check_agreement(
+    resolution_layer_a=layer_a_output,
+    resolution_layer_b=layer_b_output,
+    identity_count=payload_identity_count,
+)
+```
+
+### Exit codes
+
+| Code | Meaning |
+|------|---------|
+| `0`  | All cases passed (or demo mode) |
+| `1`  | One or more REJECT conditions detected |
+
+### Output (demo mode — verified 2026-06-28)
+
+```
+=== FC Cross-Layer Agreement Checker ===
+Forensic Capital | cross-layer verification tooling
+forensic-capital.com
+
+Mode      : [DEMO]
+Timestamp : 2026-06-28 21:02 UTC
+
+─────────────────────────────────────────────
+
+Case      : Perfect agreement
+Desc      : Both layers resolve to the same identity; payload is unambiguous
+Layer A   : asset_alpha
+Layer B   : asset_alpha
+Identities: 1
+Verdict   : ✅ PASS
+
+─────────────────────────────────────────────
+
+Case      : Layer disagreement
+Desc      : Layer A and Layer B resolve to different identities from the same payload
+Layer A   : asset_alpha
+Layer B   : asset_beta
+Identities: 1
+Verdict   : 🔴 REJECT
+Reason    : layer_disagreement
+
+─────────────────────────────────────────────
+
+Case      : Dual-identity payload
+Desc      : Payload encodes two valid identities — ambiguous proof, cannot be trusted
+Layer A   : asset_alpha
+Layer B   : asset_alpha
+Identities: 2
+Verdict   : 🔴 REJECT
+Reason    : multiple_identities
+
+─────────────────────────────────────────────
+
+Summary   : 3/3 cases checked
+Flags     : 🔴 2 REJECT(s) — fail-closed enforcement required
+
+─────────────────────────────────────────────
+
+Security principle: ambiguous proofs must fail closed.
+  In dual-verification bridge architectures, a payload
+  that two independent layers resolve differently — or
+  that encodes more than one valid identity — cannot be
+  safely processed. REJECT is the only conservative
+  response. Applies to relay-proof and zk-light-client
+  designs alike. Permitting ambiguous proofs to pass
+  collapses the guarantee of dual verification entirely.
+
+⚠  DEMO MODE — scenarios are hardcoded illustrative data.
+   Integrate check_agreement() with your bridge resolver
+   to verify live payloads.
+
+Forensic Capital : forensic-capital.com
+Version          : 1.0.0 | Forensic Capital — cross-layer verification tooling
+```
+
+---
+
 Forensic Capital — [forensic-capital.com](https://forensic-capital.com)

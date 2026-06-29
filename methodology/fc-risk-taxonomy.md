@@ -18,8 +18,8 @@ root exploitation mechanism, not the attack delivery method. For example,
 a flash loan used to manipulate governance is classified as `GOVERNANCE`, not
 `FLASH_LOAN`, because the flash loan is a delivery mechanism, not the vulnerability.
 
-FC has published full forensic reports for 3 incident classes:
-FC-001 (DVN_BRIDGE), FC-003 (CREDENTIAL_COMPROMISE), FC-004 (BRIDGE_VERIFICATION_GAP).
+FC has published full forensic reports for 4 incident classes:
+FC-001 (DVN_BRIDGE), FC-003 (CREDENTIAL_COMPROMISE), FC-004 (BRIDGE_VERIFICATION_GAP), FC-005 (BRIDGE_VERIFICATION_GAP — cross-chain registry corruption, Gravity Bridge).
 
 ---
 
@@ -59,7 +59,8 @@ the proof or signature check. The protocol accepts fraudulent messages as valid.
 
 **Signature incidents:** BNB Chain Bridge ($570M, Merkle proof forgery),
 Wormhole ($320M, guardian signature bypass), Nomad ($190M, zero-value replay),
-Verus Bridge ($11.58M, checkCCEValues binding gap — FC-004).
+Verus Bridge ($11.58M, checkCCEValues binding gap — FC-004),
+Gravity Bridge ($5.4M, cross-chain registry corruption via deployERC20() — FC-005).
 
 ### CREDENTIAL_COMPROMISE
 Loss of a cryptographic credential (private key, seed phrase, API key) that
@@ -122,9 +123,10 @@ Full forensic analysis published for the following incident classes:
 | FC-001 | KelpDAO | DVN_BRIDGE | $292,000,000 | Partial | Full forensic |
 | FC-003 | Resolv | CREDENTIAL_COMPROMISE | $25,000,000 | Partial | Full forensic |
 | FC-004 | Verus Bridge | BRIDGE_VERIFICATION_GAP | $11,580,000 | Partial | Full forensic |
+| FC-005 | Gravity Bridge | BRIDGE_VERIFICATION_GAP | $5,400,000 | ACTIVE | Full forensic |
 
-FC-001, FC-003, and FC-004 represent 3 distinct vector classes — no two FC reports
-cover the same attack surface. Combined: $328,580,000 in documented losses.
+FC-001, FC-003, FC-004, and FC-005 represent 4 reports across 3 distinct vector classes — no two reports
+cover the same attack surface. Combined: $333,980,000 in documented losses.
 
 ---
 

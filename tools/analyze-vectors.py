@@ -31,6 +31,7 @@ FC_REPORTS = {
     "KelpDAO":     "forensic-capital.com/the-kelpdao-exploit/",
     "Resolv":      "forensic-capital.com/reports/resolv/",
     "Verus_Bridge":"forensic-capital.com/reports/fc-004-verus/",
+    "Gravity_Bridge":"forensic-capital.com/reports/fc-005-gravity/",
 }
 
 # ── demo data (hardcoded, always works) ──────────────────────────────────────
@@ -44,6 +45,7 @@ DEMO_ROWS = [
     {"date":"2026-04-18","protocol":"KelpDAO",       "loss":292000000,"vector":"DVN_BRIDGE",             "fc":True},
     {"date":"2026-03-22","protocol":"Resolv",        "loss":25000000, "vector":"CREDENTIAL_COMPROMISE",  "fc":True},
     {"date":"2026-05-18","protocol":"Verus_Bridge",  "loss":11580000, "vector":"BRIDGE_VERIFICATION_GAP","fc":True},
+    {"date":"2026-05-29","protocol":"Gravity_Bridge", "loss":5400000,  "vector":"BRIDGE_VERIFICATION_GAP","fc":True},
 ]
 
 # ── helpers ───────────────────────────────────────────────────────────────────

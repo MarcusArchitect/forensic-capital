@@ -47,3 +47,4 @@ date,protocol,chain,loss_usd,vector_category,root_cause,post_mortem_url,recovery
 2025-04-21,Loopscale,Solana,5700000,PRICE_MANIPULATION,oracle_price_manipulation_collateral,https://rekt.news/loopscale-rekt/,partial,rekt.news
 2026-03-22,Resolv,Ethereum,25000000,CREDENTIAL_COMPROMISE,aws_kms_service_role_compromise,https://forensic-capital.com/reports/resolv/,partial,certik.com
 2026-05-18,Verus_Bridge,Ethereum,11580000,BRIDGE_VERIFICATION_GAP,checkCCEValues_binding_gap,https://forensic-capital.com/reports/fc-004-verus/,partial,blockaid.io
+2026-05-29,Gravity_Bridge,Ethereum,5400000,BRIDGE_VERIFICATION_GAP,deployERC20_permissionless_registry_corruption,https://forensic-capital.com/reports/fc-005-gravity/,unlikely,rekt.news

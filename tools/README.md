@@ -11,7 +11,7 @@ Public companion tools for Forensic Capital incident reports.
 DVN (Decentralized Verification Network) threshold misconfiguration is the root cause
 of the KelpDAO FC-001 incident ($292M, 2026-04-18). A `requiredDVNCount` of 1 allows
 a single compromised DVN to approve fraudulent cross-chain messages unilaterally.
-Full analysis: [forensic-capital.com/the-kelpdao-exploit/](https://forensic-capital.com/the-kelpdao-exploit/)
+Full analysis: [forensic-capital.com/reports/fc-001-kelpdao/](https://forensic-capital.com/reports/fc-001-kelpdao/)
 
 ### What it checks
 
@@ -66,7 +66,7 @@ If all fail, falls back to demo mode automatically.
 ```
 === FC DVN Config Checker ===
 Forensic Capital | FC-001 companion
-forensic-capital.com/the-kelpdao-exploit/
+forensic-capital.com/reports/fc-001-kelpdao/
 
 Network   : Ethereum Mainnet
 Mode      : [DEMO]
@@ -124,7 +124,7 @@ FC-001 context: KelpDAO ($292M, 2026-04-18) demonstrated
 ⚠  DEMO MODE — configurations are hardcoded illustrative data.
    Run without --demo for live on-chain verification.
 
-Full analysis : forensic-capital.com/the-kelpdao-exploit/
+Full analysis : forensic-capital.com/reports/fc-001-kelpdao/
 Version       : 1.0.0 | FC-001
 ```
 

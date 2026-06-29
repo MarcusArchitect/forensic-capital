@@ -12,7 +12,7 @@ Source-traceable. SHA-256 sealed. Passive OSINT only.
 
 | ID | Protocol | Loss | FC Class | Vector | Date | Status |
 |---|---|---|---|---|---|---|
-| [FC-001](https://forensic-capital.com/the-kelpdao-exploit/) | KelpDAO | $292M | FC-CLASS-004 | DVN threshold bypass | 2026-04-18 | CLOSED |
+| [FC-001](https://forensic-capital.com/reports/fc-001-kelpdao/) | KelpDAO | $292M | FC-CLASS-004 | DVN threshold bypass | 2026-04-18 | CLOSED |
 | [FC-003](https://forensic-capital.com/reports/resolv/) | Resolv | $25M | FC-CLASS-002 | AWS KMS credential compromise | 2026-03-22 | CLOSED |
 | [FC-004](https://forensic-capital.com/reports/fc-004-verus/) | Verus Bridge | $11.58M | FC-CLASS-001 | Bridge verification gap | 2026-05-18 | CLOSED |
 | [FC-005](https://forensic-capital.com/reports/fc-005-gravity/) | Gravity Bridge | $5.4M | FC-CLASS-001 | Cross-chain registry corruption | 2026-05-29/30 | ACTIVE |

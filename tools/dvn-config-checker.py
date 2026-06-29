@@ -14,7 +14,7 @@ is the root cause of the KelpDAO FC-001 incident ($292M, 2026-04-18).
 This tool checks the requiredDVNCount and optionalDVNCount parameters
 against the FC risk scoring model.
 
-See: forensic-capital.com/the-kelpdao-exploit/
+See: forensic-capital.com/reports/fc-001-kelpdao/
 """
 
 import argparse
@@ -28,7 +28,7 @@ from datetime import datetime, timezone
 
 VERSION = "1.0.0"
 TOOL_NAME = "FC DVN Config Checker"
-FC_REPORT_URL = "forensic-capital.com/the-kelpdao-exploit/"
+FC_REPORT_URL = "forensic-capital.com/reports/fc-001-kelpdao/"
 FC_REPORT_ID = "FC-001"
 
 # LayerZero V2 Endpoint — Ethereum mainnet
